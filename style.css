@@ -1,0 +1,149 @@
+:root {
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    background-color: var(--Light-grayish-blue);
+    color: var(--White);
+    font-weight: 600;
+}
+
+h1 {
+    margin-bottom: 6px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+.wrapper {
+    display: grid;
+    gap: 24px;
+    padding: 50px 0;
+}
+
+.section {
+    display: flex;
+    gap: 20px;
+    flex-flow: column wrap;
+    padding: 40px 20px;
+    border-radius: 12px;
+
+}
+
+.daniel {
+    position: relative;
+    background-color: var(--Moderate-violet);
+    padding-top: 0;
+}
+
+.svg {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    height: 135px;
+    width: 120px;
+    z-index: 2;
+    opacity: 0.5;
+    margin-right: 6px;
+}
+
+.section .profile {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+}
+
+.profile img {
+    border-radius: 50%;
+}
+
+.Verified,
+.story {
+    color: var(--Light-gray);
+    font-weight: 600;
+}
+
+.story {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.jonathan {
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.jeanette,
+.kira {
+    background-color: var(--White);
+}
+
+.jeanette h1,
+.jeanette h2,
+.kira h1,
+.kira h2 {
+    color: var(--Very-dark-blackish-blue);
+}
+
+.jeanette .Verified,
+.jeanette .story,
+.kira .Verified,
+.kira .story {
+    color: hsl(0, 0%, 61%);
+}
+
+
+.patrick {
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+
+    .grid-col-span-2 {
+        grid-column: span 2;
+    }
+
+    .grid-row-span-2 {
+        grid-row: span 2;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .kira {
+
+        grid-column: 4;
+        grid-row: 1 / span 2;
+    }
+
+    .svg {
+        position: absolute;
+        right: 120px;
+        top: 0;
+        height: 135px;
+        width: 120px;
+        z-index: 2;
+        opacity: 0.5;
+        margin-right: 6px;
+    }
+
+}
