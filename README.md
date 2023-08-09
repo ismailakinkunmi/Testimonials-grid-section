@@ -13,3 +13,5 @@ Thanks for checking out this front-end coding challenge.
 - CSS
 - Git & GitHub
 - VsCode
+
+### [preview site](https://ismailakinkunmi.github.io/Testimonials-grid-section/)
